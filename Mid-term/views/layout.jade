@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title Your Express Project
+    // Adding Bootstrap CSS link from CDN
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+    // Custom CSS
+    style.
+      /* Add your custom CSS styles here */
+      /* Centering and styling the navigation bar */
+      .navbar {
+        text-align: center;
+        background-color: #343a40;
+        color: #fff;
+      }
+      /* Centering and styling the jumbotron */
+      .jumbotron {
+        text-align: center;
+        background-color: #f8f9fa;
+        color: #343a40;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 0.3rem;
+      }
+      /* Styling the footer */
+      footer.footer {
+        text-align: center;
+        margin-top: 2rem;
+        background-color: #343a40;
+        color: #fff;
+        padding: 1rem;
+      }
+  body
+    // Navigation bar
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand(href='/home') Home
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='/student') Student
+          li.nav-item
+            a.nav-link(href='/about') About
+          li.nav-item
+            a.nav-link(href='/contact') Contact
+    // Jumbotron with full name
+    .jumbotron
+      h1(style='color: #343a40;') Manjot kaur
+      p This is the main content of your Express project.
+    // Main content
+    block content
+    // Footer
+    footer.footer
+      p Student Name: Manjot Kaur
+      p Student Number: 200533995

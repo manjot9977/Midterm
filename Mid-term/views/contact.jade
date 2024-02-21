@@ -1,0 +1,69 @@
+// student.jade
+
+extends layout
+
+block content
+  // CSS styles
+  style.
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type='text'],
+    input[type='email'] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type='submit'] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button[type='submit']:hover {
+      background-color: #0056b3;
+    }
+
+  // Form content
+  .container
+    h1 Student Information Form
+    
+    // Form for collecting student information
+    form(action='/contact', method='POST')
+      .form-group
+        label(for='studentNumber') Student Number:
+        input#studentNumber.form-control(type='text', name='studentNumber', placeholder='Enter student number', required)
+      
+      .form-group
+        label(for='firstName') First Name:
+        input#firstName.form-control(type='text', name='firstName', placeholder='Enter first name', required)
+      
+      .form-group
+        label(for='lastName') Last Name:
+        input#lastName.form-control(type='text', name='lastName', placeholder='Enter last name', required)
+      
+      .form-group
+        label(for='email') Email Address:
+        input#email.form-control(type='email', name='email', placeholder='Enter email address', required)
+      
+      button.btn.btn-primary(type='submit') Submit
